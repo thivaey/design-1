@@ -1,0 +1,19 @@
+To open:
+pickle.load(open(filename, 'rb'))
+
+Object is a list of dicts.
+Each dict has the following key-value pairs:
+- 'time': float
+- 'time_utc': (int, int, int, int, int, int)
+- 'title': string
+- 'text': string
+- 'comments': [strings]
+- 'votes': (int, float)
+
+The meaning for each key-value pair:
+time - Unix Timestamp of post creation
+time_utc - Conversion of 'time' to (year, month, day, hour, minute, second)
+title - Title of the post
+text - Text of the post
+comments - List of comments replying to the post
+votes - Tuple of score (upvotes - downvotes) and upvote-ratio (upvotes / (upvotes + downvotes))
