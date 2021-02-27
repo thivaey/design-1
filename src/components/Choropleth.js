@@ -15,6 +15,7 @@ function Choropleth({ data }) {
         const w = 992;
         const h = 650;
         const pad = 60;
+        d3.select("svg").remove();
         const svg = d3.select('#choropleth')
         .append('svg')
         .attr('width', w)
@@ -60,7 +61,7 @@ function Choropleth({ data }) {
             }
             return 0;
         })
-        .on('mouseover', (d,event,i)=>{
+        .on('mouseover', (event,d)=>{
             tooltip.style('opacity', 1)
             .style('left', (event.pageX+30)+'px')
             .style('top', (event.pageY-20)+'px')
@@ -136,14 +137,10 @@ function Choropleth({ data }) {
         .attr('x', pad)
         .attr('y', h-pad+10)
         
-        }) // closing await 
-    //},
-    // [data.length]
-//   );
+        })
 
   return (
     <div id="choropleth">
-        <p>Hiiiiii</p>
     </div>
   );
 }
