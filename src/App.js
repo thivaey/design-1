@@ -1,4 +1,5 @@
 import Visualization from './components/Visualization';
+import Choropleth from './components/Choropleth';
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -41,7 +42,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Visualization data={data} />
+        <Choropleth data={data} />
         <p>
           Landing page for Design 1
         </p>
