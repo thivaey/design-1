@@ -2,14 +2,17 @@ import { useD3 } from '../hooks/useD3';
 import React from 'react';
 import * as d3 from 'd3';
 import * as topojson from "topojson-client";
+import covidData from '../data/us-counties.csv';
+import testData from '../data/test.csv';
 
 function Choropleth({ data }) {
 //   const ref = useD3(
 //     (svg) => {
         const urlEdu = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json";
+        const urlCovid = testData;
         const urlCounty = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json";
         Promise.all([
-            d3.json(urlEdu),
+            d3.csv(urlCovid),
             d3.json(urlCounty)
             ]).then( ([edu, county]) => {
         const w = 992;
@@ -27,8 +30,9 @@ function Choropleth({ data }) {
         .attr('id','tooltip')
         .style('opacity', 0);
         
+        console.log(edu);
         const path = d3.geoPath();
-        const bachelorHigherHighLow = d3.extent(edu.map(d=>d.bachelorsOrHigher));
+        const bachelorHigherHighLow = d3.extent(edu.map(d=>d.cases));
         // console.log(bachelorHigherHighLow);
         const low = bachelorHigherHighLow[0];
         const high = bachelorHigherHighLow[1];
@@ -49,7 +53,7 @@ function Choropleth({ data }) {
         .attr('fill', (d)=>{
             let eduMatch = edu.filter((data)=>data.fips==d.id);
             if(eduMatch[0]){
-            return colors(eduMatch[0].bachelorsOrHigher)
+            return colors(eduMatch[0].cases)
             }
             return 0;
         })
@@ -57,7 +61,7 @@ function Choropleth({ data }) {
         .attr('data-education', (d)=>{
             let eduMatch = edu.filter((data)=>data.fips==d.id);
             if(eduMatch[0]){
-            return eduMatch[0].bachelorsOrHigher
+            return eduMatch[0].cases
             }
             return 0;
         })
@@ -68,13 +72,13 @@ function Choropleth({ data }) {
             .attr('data-education', ()=>{
             let eduMatch = edu.filter(data=>data.fips==d.id);
             if(eduMatch[0]){
-                return eduMatch[0].bachelorsOrHigher;
+                return eduMatch[0].cases;
             }
             return 0;
             })
             .html(()=>{
             let eduMatch = edu.filter(data=>data.fips==d.id);
-            if(eduMatch[0]){return `${eduMatch[0].area_name}, ${eduMatch[0].state}<br/> ${eduMatch[0].bachelorsOrHigher}%`}
+            if(eduMatch[0]){return `${eduMatch[0].county}, ${eduMatch[0].state}<br/> ${eduMatch[0].cases}`}
             return 0;
             })
             
@@ -88,16 +92,16 @@ function Choropleth({ data }) {
         
         svg.append('text')
         .attr('id', 'title')
-        .text('US Educational Attainment')
+        .text('COVID Cases per County')
         .attr('x', w/3)
         .attr('y', 25);
         
         
-        svg.append('text')
-        .attr('id', 'description')
-        .text("Percentage of adults age 25 and older with a bachelor\'s degree or higher (2010-2014)")
-        .attr('x', w/5)
-        .attr('y', 40);
+        // svg.append('text')
+        // .attr('id', 'description')
+        // .text("Number of COVID Cases per County")
+        // .attr('x', w/5)
+        // .attr('y', 40);
         
         // set color scale
         const xScale =  d3.scaleLinear()
@@ -106,7 +110,7 @@ function Choropleth({ data }) {
         
         const xAxis = d3.axisBottom(xScale)
         .tickSize(25)
-        .tickFormat(d=>Math.round(d)+'%')
+        .tickFormat(d=>d)
         .tickValues(colors.domain());
         
         svg.append('g')
@@ -117,7 +121,7 @@ function Choropleth({ data }) {
         .remove();
 
         
-        // set legend om color scale
+        // set legend on color scale
         svg.append('g')
         .attr('id', 'legend')
         .selectAll('rect')
