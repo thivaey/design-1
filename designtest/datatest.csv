@@ -1,0 +1,200 @@
+Ticker,Sentiment,UpVotes,College
+MSFT,0.1637,1381.23,University of Illinois - UC
+AAPL,0.086,1326.70,University of Illinois - UC
+AMZN,0.3188,998.09,Boston University
+FB,0.1445,541.53,Indiana University
+GOOG,0.0549,846.79,Indiana University
+JNJ,-0.0103,386.07,University of Florida
+BRK-B,-0.2277,361.37,University of Utah
+V,0.0158,331.91,University of Utah
+JPM,-0.3582,312.61,University of Utah
+PG,-0.0985,288.88,Harvard
+INTC,0.0402,267.88,University of Illinois - UC
+UNH,-0.0137,287.44,University of Florida
+MA,-0.0123,267.85,University of Utah
+HD,-0.0123,266.90,Boston University
+VZ,-0.1189,230.01,Indiana University
+NVDA,0.5344,207.37,University of Illinois - UC
+T,-0.2354,226.46,Indiana University
+DIS,-0.184,210.03,Indiana University
+PFE,-0.0429,210.89,University of Florida
+NFLX,0.3268,180.85,Indiana University
+MRK,-0.1603,200.85,University of Florida
+CSCO,-0.0638,193.06,University of Illinois - UC
+XOM,-0.3608,190.21,University of Oregon
+ADBE,0.1681,183.52,University of Illinois - UC
+BAC,-0.3566,200.87,University of Utah
+PEP,-0.0453,184.12,Harvard
+WMT,0.0462,175.13,Consumer Defensiv{e
+CMCSA,-0.1385,179.21,Indiana University
+PYPL,0.3947,174.38,University of Utah
+KO,-0.1864,181.24,Harvard
+CVX,-0.2509,171.50,University of Oregon
+ABBV,0.0402,158.43,University of Florida
+ABT,0.0531,162.47,University of Florida
+CRM,0.0935,160.42,University of Illinois - UC
+BMY,-0.053,140.01,University of Florida
+MCD,-0.0668,141.86,Boston University
+TMO,0.0474,137.25,University of Florida
+AMGN,-0.0607,132.99,University of Florida
+COST,0.029,136.57,Harvard
+MDT,-0.1651,131.30,University of Florida
+LLY,0.1501,127.05,University of Florida
+ACN,-0.0801,127.83,University of Illinois - UC
+NKE,-0.0746,122.45,Boston University
+UNP,-0.0865,118.14,University of North Carolina
+ORCL,-0.0068,115.94,University of Illinois - UC
+NEE,-0.0343,122.63,University of Texas
+AVGO,-0.1246,112.10,University of Illinois - UC
+TXN,-0.1158,108.11,University of Illinois - UC
+PM,-0.1721,114.16,Harvard
+IBM,-0.1168,110.08,University of Illinois - UC
+LIN,-0.1035,107.25,University of California
+AMT,0.0549,114.12,University of Michigan
+DHR,0.0311,103.06,University of Florida
+C,-0.448,107.12,University of Utah
+HON,-0.2137,105.24,University of North Carolina
+WFC,-0.5507,104.56,University of Utah
+GILD,0.1287,95.16,University of Florida
+QCOM,-0.108,89.02,University of Illinois - UC
+SBUX,-0.1172,92.65,Boston University
+LMT,-0.0523,98.77,University of North Carolina
+LOW,0.0208,98.02,Boston University
+MMM,-0.1699,90.06,University of North Carolina
+FIS,-0.0211,84.94,University of Illinois - UC
+RTX,-0.3625,98.29,University of North Carolina
+CVS,-0.1475,86.49,University of Florida
+CHTR,0.0574,83.73,Indiana University
+BLK,0.0211,81.74,University of Utah
+SPGI,0.1421,77.77,University of Utah
+INTU,0.098,73.72,University of Illinois - UC
+NOW,0.3742,71.20,University of Illinois - UC
+VRTX,0.3015,71.24,University of Florida
+MDLZ,-0.0977,73.92,Harvard
+BA,-0.5778,80.01,University of North Carolina
+ANTM,-0.0825,73.79,University of Florida
+MO,-0.244,72.42,Harvard
+CI,-0.0757,74.81,University of Florida
+UPS,-0.1738,69.80,University of North Carolina
+BKNG,-0.2057,68.94,Boston University
+AMD,0.203,60.45,University of Illinois - UC
+BDX,-0.1203,71.11,University of Florida
+D,-0.0279,68.80,University of Texas
+CME,-0.1092,64.59,University of Utah
+PLD,-0.0178,68.61,University of Michigan
+ISRG,-0.048,66.07,University of Florida
+CAT,-0.2384,66.68,University of North Carolina
+ZTS,-0.0169,65.66,University of Florida
+CCI,0.0988,70.09,University of Michigan
+TJX,-0.1253,65.46,Boston University
+SYK,-0.1229,62.86,University of Florida
+AXP,-0.2824,65.67,University of Utah
+DUK,-0.0875,62.49,University of Texas
+TGT,-0.0836,59.94,Harvard
+FISV,-0.1012,60.61,University of Illinois - UC
+CL,0.0277,61.67,Harvard
+ADP,-0.209,62.58,University of North Carolina
+EQIX,0.1479,61.05,University of Michigan
+GS,-0.2175,64.00,University of Utah
+SO,-0.1432,59.64,University of Texas
+ATVI,0.2299,53.76,Indiana University
+GE,-0.4256,59.10,University of North Carolina
+BIIB,0.0263,54.15,University of Florida
+GPN,-0.0318,53.40,University of North Carolina
+NEM,0.4511,47.95,University of California
+CSX,-0.0529,55.38,University of North Carolina
+APD,-0.0027,53.03,University of California
+ILMN,0.0692,54.81,University of Florida
+AMAT,-0.1089,50.43,University of Illinois - UC
+MMC,-0.062,53.73,University of Utah
+ICE,0.0132,52.77,University of Utah
+BSX,-0.2059,52.20,University of Florida
+HUM,0.0761,53.45,University of Florida
+MU,-0.1644,51.42,University of Illinois - UC
+ECL,0.0389,52.93,University of California
+NOC,-0.0525,53.65,University of North Carolina
+COP,-0.3345,47.17,University of Oregon
+ITW,-0.0884,50.51,University of North Carolina
+MS,-0.215,51.61,University of Utah
+CB,-0.2484,56.00,University of Utah
+USB,-0.4446,51.87,University of Utah
+KMB,0.0159,48.24,Harvard
+SHW,-0.0107,48.38,University of California
+REGN,0.5178,58.09,University of Florida
+EW,-0.0621,46.14,University of Florida
+AON,-0.0784,46.47,University of Utah
+PNC,-0.3447,50.72,University of Utah
+DG,0.1475,46.82,Harvard
+TFC,-0.4089,51.10,University of Utah
+NSC,-0.1167,46.95,University of North Carolina
+DE,-0.1879,48.14,University of North Carolina
+BAX,0.0396,44.94,University of Florida
+PGR,0.0322,44.76,University of Utah
+ADSK,0.0672,44.49,University of Illinois - UC
+ADI,-0.0655,40.82,University of Illinois - UC
+MCO,0.0818,42.94,University of Utah
+EL,-0.1372,42.79,Harvard
+LHX,-0.088,43.44,University of North Carolina
+LRCX,-0.1069,38.57,University of Illinois - UC
+WM,-0.132,41.49,University of North Carolina
+SCHW,-0.3097,41.12,University of Utah
+AEP,-0.1664,41.99,University of Texas
+ROP,0.0362,39.61,University of North Carolina
+CNC,0.0313,38.88,University of Florida
+TMUS,0.2216,37.43,Indiana University
+GIS,0.1195,37.37,Harvard
+DXCM,0.8527,32.98,University of Florida
+DD,-0.2416,37.36,University of California
+EXC,-0.1917,37.13,University of Texas
+EA,0.1145,35.38,Indiana University
+DLR,0.1342,38.34,University of Michigan
+PSX,-0.3137,34.86,University of Oregon
+SRE,-0.1827,35.87,University of Texas
+EMR,-0.2674,37.13,University of North Carolina
+ROST,-0.1936,35.50,Boston University
+EBAY,0.2033,33.78,Boston University
+ETN,-0.1694,35.15,University of North Carolina
+GD,-0.2142,34.75,University of North Carolina
+GM,-0.2902,33.53,Boston University
+SBAC,0.2032,34.94,University of Michigan
+XEL,-0.0491,33.58,University of Texas
+ALL,-0.1568,31.79,University of Utah
+ORLY,-0.0759,31.22,Boston University
+EOG,-0.3758,30.01,University of Oregon
+KMI,-0.2721,30.43,University of Oregon
+WBA,-0.3284,31.32,University of Florida
+BK,-0.3145,31.51,University of Utah
+MSCI,0.309,27.35,University of Utah
+CTSH,-0.1704,29.35,University of Illinois - UC
+STZ,-0.0919,29.31,Harvard
+COF,-0.4149,31.86,University of Utah
+HCA,-0.2782,29.01,University of Florida
+KLAC,-0.029,27.58,University of Illinois - UC
+FDX,-0.2262,31.30,University of North Carolina
+VLO,-0.2987,27.51,University of Oregon
+PSA,-0.1244,30.02,University of Michigan
+WEC,-0.066,27.89,University of Texas
+INFO,-0.1107,27.73,University of North Carolina
+APH,-0.161,28.23,University of Illinois - UC
+DOW,-0.34,28.67,University of California
+TROW,-0.0554,28.22,University of Utah
+SYY,-0.395,28.49,Harvard
+YUM,-0.1338,27.51,Boston University
+AZO,-0.0574,27.31,Boston University
+MNST,0.0812,27.00,Harvard
+CMG,0.2611,25.40,Boston University
+IQV,-0.0751,26.33,University of Florida
+TEL,-0.2046,27.72,University of Illinois - UC
+ZBH,-0.1756,26.29,University of Florida
+VRSK,0.0532,27.45,University of North Carolina
+WLTW,-0.017,26.40,University of Utah
+MET,-0.3459,28.46,University of Utah
+KR,0.1166,25.61,Harvard
+ES,-0.0777,26.21,University of Texas
+CLX,0.2934,25.69,Harvard
+HPQ,-0.1727,22.25,University of Illinois - UC
+AFL,-0.344,26.84,University of Utah
+IDXX,0.1286,26.22,University of Florida
+A,-0.0039,26.84,University of Florida
+SLB,-0.5627,25.98,University of Oregon
+MAR,-0.3987,24.82,Boston University
