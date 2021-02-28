@@ -1,0 +1,49 @@
+id,text,value
+UIUC, text1,-0.5
+UIUC, text1,0.7
+UIUC,text1,0.6
+UIUC, text1,0.2
+UIUC, text1,0.1
+UIUC,text1,-0.4
+UIUC, text1,-0.3
+UIUC, text1,0.2
+UIUC,text1,0.2
+UIUC, text1,0.2
+UIUC, text1,0.1
+UIUC,text1,-0.4
+Univ. of Michigan, text2, -0.5
+Univ. of Michigan, text2,-0.4
+Univ. of Michigan, text2,-0.4
+Univ. of Michigan, text2,-0.4
+Univ. of Michigan, text2,0.6
+Univ. of Michigan, text2,0.6
+Univ. of Michigan, text2, 0.6
+Univ. of Michigan, text2,0.6
+Boston University, text3,-0.4
+Boston University, text3,-0.4
+Boston University, text3,0.6
+Boston University, text3,0.6
+NYU, text4,-0.4
+NYU,text4,-0.4
+NYU,text4,-0.4
+NYU,text4,0.6
+NYU,text4,0.6
+Univ. of Florida, text5,-0.4
+Univ. of Florida, text5,-0.4
+Univ. of Florida, text5,-0.4
+Univ. of Florida, text5,1
+Univ. of Florida, text5,0.9
+"Univ. of Texas", text5,-0.7
+"Univ. of Texas",text6,-0.4
+"Univ. of Texas", text6,-0.3
+"Univ. of Texas", text6,-0.1
+"Univ. of Texas", text6,0
+"UCLA",text7,-0.1
+"UCLA", text7,-0.6
+"UCLA", text7,0.8
+"UCLA", text7,0.9
+Univ. of Oregon, text8,-0.1
+Univ. of Oregon,text8,-0.4
+Univ. of Oregon, text8,-0.2
+Univ. of Oregon, text8,0.8
+Univ. of Oregon, text8,0.1
