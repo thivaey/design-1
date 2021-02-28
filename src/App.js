@@ -18,7 +18,7 @@ console.log(high)
 const steps = 9;
 const discreteColors = d3.scaleThreshold()
     .domain(d3.range(low, high, (high-low)/9))
-    .range(d3.schemeGreens[9]);
+    .range(d3.schemeReds[9]);
 const colors = d3.scaleSequential()
     .interpolator(d3.interpolate(d3.schemeGreens[9][0], d3.schemeGreens[9][8])) // TODO: double-check
     .domain(d3.range(low, Math.log(high * 1000)))
@@ -98,7 +98,7 @@ function updateTest(data) {
                         // return colors(Math.log(data[d.id]) / Math.log(1000 * high))
                         return discreteColors(data[d.id])
                     }
-                    return 0;
+                    return "rgb(0,0,0)";
                 })
                 .attr('data-fips', (d)=>d.id)
                 .attr('data-cases', (d)=>{
@@ -134,7 +134,6 @@ function Choropleth(data) {
         var geojson = topojson.feature(topology, topology.objects.counties).features;
         console.log("geojson", geojson)
 
-
         svg.append('g')
             .selectAll('path')
             .data(geojson)
@@ -147,7 +146,7 @@ function Choropleth(data) {
                         // return colors(Math.log(data[d.id]) / Math.log(1000 * high))
                         return discreteColors(data[d.id])
                     }
-                    return 0;
+                    return "rgb(0,0,0)";
                 })
                 .attr('data-fips', (d)=>d.id)
                 .attr('data-cases', (d)=>{
@@ -157,6 +156,10 @@ function Choropleth(data) {
                     }
                     return 0;
                 })
+            .exit().transition()
+                .duration(500)
+                .attr('fill', (d)=>{ return 0;})
+                .remove();
                 // .on('mouseover', (event,d)=>{
                 //     tooltip.style('opacity', 1)
                 //     .style('left', (event.pageX+30)+'px')
@@ -226,7 +229,7 @@ function Choropleth(data) {
 
         svg.append('g')
             .attr('id', 'source').append('text')
-                .html('Data Source: <a href="https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json">U.S. County Borders</a>')
+                .html('Data Source: <a href="https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json">U.S. </a>')
                 .attr('x', pad)
                 .attr('y', h-pad+10)
     });
