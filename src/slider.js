@@ -70,10 +70,7 @@ function slider_snap(min, max) {
         // move these two lines into the on('end') part below
         svg.node().value = s.map(d => Math.round(x.invert(d)));
         // svg.node().dispatchEvent(new CustomEvent("input"));
-        var eventHandler = document.getElementById("eventHandler");
-        let event = new Event("change"); 
-        event.data = getRange();
-        eventHandler.dispatchEvent(event);
+        
       })
       .on('end', function() {
         if (!d3.event.sourceEvent) return;
@@ -81,7 +78,10 @@ function slider_snap(min, max) {
         var d1 = d0.map(Math.round);
         d3.select(this).transition().call(d3.event.target.move, d1.map(x));
 
-        
+        var eventHandler = document.getElementById("eventHandler");
+        let event = new Event("change"); 
+        event.data = getRange();
+        eventHandler.dispatchEvent(event);
       })
   
     // append brush to g

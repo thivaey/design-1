@@ -10,10 +10,18 @@
 
 <body>
   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src= "https://d3js.org/d3-color.v2.min.js"></script>
+  <script src= "https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
 
   <div> <!-- Title and Slider -->
     <h1 class='title'> 2020: COVID and Sentiment </h1>
     <svg width='500' height='120' class='slider' id='slider'></svg>
+  </div>
+
+  <div id='choropleth'> <!-- Map and Sentiment--> 
+    <!-- SVGs for Map and Sentiment -->
   </div>
 
   <div id='eventHandler'> <!-- Map and Sentiment--> 
@@ -21,14 +29,7 @@
     <svg width='500' height='500' class='test' id='test'></svg>
   </div>
 
-  <div id='choropleth'> <!-- Map and Sentiment--> 
-    <!-- SVGs for Map and Sentiment -->
-    <svg width='500' height='500' class='test' id='map'></svg>
-  </div>
-
   <script src="slider.js"></script>
   <script src="app.js"></script>
-  <script src='map.js'></script>
-
 </body>
 </html>
