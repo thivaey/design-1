@@ -27,7 +27,28 @@
       </div>
     </div>
     <div>
-      <img src="../data/uiucsentiment.jpg"></img>
+      <svg width="992" height="650" id='bars'>
+        <image href="../data/uiucsentiment.jpg" height="650" width="992"/>
+      </svg>
+      <script>
+        d3.select('svg#bars') 
+          .append('rect')
+          .attr('x', 66) // x,y is upper left corner
+          .attr('y', 138)
+          .attr('width', 11)
+          .attr('height', 370)
+          .attr('opacity', 0.5)
+          .attr('id', 'left')
+        d3.select('svg#bars')
+          .append('rect')
+          .attr('x', 819) // upper right corner is at (830, 138)
+          .attr('y', 138)
+          .attr('width', 11)
+          .attr('height', 370)
+          .attr('opacity', 0.5)
+          .attr('id', 'right')
+      </script>
+      <!-- <img src="../data/uiucsentiment.jpg"></img> -->
     </div>
   </div>
   <div id='eventHandler'> <!-- Map and Sentiment--> 

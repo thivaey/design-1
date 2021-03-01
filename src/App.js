@@ -49,44 +49,56 @@ function computeData(vals) {
 // Basically main()
 function setUpHandler() {
     var svg = d3.select('svg#test')
-    var test = svg.append('text')
-        .attr("font-size", 36)
-        .attr("font-weight", "bold")
-        .attr("font-family", "sans-serif")
-        .attr("x", 250)
-        .attr("y", 250)
-        .style("text-anchor", "middle")
-        .text("TEST");
+    // var test = svg.append('text')
+    //     .attr("font-size", 36)
+    //     .attr("font-weight", "bold")
+    //     .attr("font-family", "sans-serif")
+    //     .attr("x", 250)
+    //     .attr("y", 250)
+    //     .style("text-anchor", "middle")
+    //     .text("TEST");
 
     var eventHandler = document.getElementById('eventHandler')
     eventHandler.addEventListener('change', function(e) {
         var vals = e.data;
         test.text(vals[0] + ', ' + vals[1]);
         updateTest(computeData(vals))
+        updateBarSlider(vals)
     })
     drawTest(computeData([0,12]))
 }
 
+function updateBarSlider(vals) {
+    d3.select('rect#left')
+        .transition()
+        .duration(250)
+        .attr('width', 11 + 62 * vals[0])
+    d3.select('rect#right')
+        .transition()
+        .duration(250)
+        .attr('x', 819 - 62 * (12 - vals[1]))
+        .attr('width', 11 + 62 * (12 - vals[1]))
+}
+
 function drawTest(data) {
     var svg = d3.select('svg#test')        
-    var test2 = svg.append('text')
-        .attr("id", "test2")
-        .attr("font-size", 12)
-        .attr("font-weight", "bold")
-        .attr("font-family", "sans-serif")
-        .attr("x", 250)
-        .attr("y", 300)
-        .style("text-anchor", "middle")
-        .text("Champaign: " + data[17019]);
+    // var test2 = svg.append('text')
+    //     .attr("id", "test2")
+    //     .attr("font-size", 12)
+    //     .attr("font-weight", "bold")
+    //     .attr("font-family", "sans-serif")
+    //     .attr("x", 250)
+    //     .attr("y", 300)
+    //     .style("text-anchor", "middle")
+    //     .text("Champaign: " + data[17019]);
 
     /* Initial creation of components */
     Choropleth(data)
-    // TODO: add sentiment
 }
 
 function updateTest(data) {
     // Update choropleth
-    d3.select('text#test2').text("Champaign: " + data[17019]);
+    // d3.select('text#test2').text("Champaign: " + data[17019]);
     let svg = d3.select('#mapsvg')
     svg.selectAll('path')
         .call(selection => {
@@ -157,31 +169,31 @@ function Choropleth(data) {
                     return 0;
                 })
                 .on('mouseover', (event,i)=>{
-                  console.log(d3.event);
-                  const d = event.id;
-                  tooltip.style('opacity', 1)
-                  .style('left', (d3.event.pageX+30)+'px')
-                  .style('top', (d3.event.pageY-20)+'px')
-                  .attr('data-education', ()=>{
-                    let match = (d in data);
-                    if (match) {
-                        return data[d]
-                    }
-                  return 0;
-                  })
-                  .html(()=>{
-                  let match = (d in data);
-                  console.log(`data[d]: ${data[d]}`)
-                  if(match){return `${data[d]} cases`}
-                  else {return '0 cases'}
-                  return 0;
-                  })
-              })
-              .on('mouseout', (d)=>{
-                  tooltip.style('opacity', 0)
-                  .style('left', 0)
-                  .style('top', 0)
-              })
+                    console.log(d3.event);
+                    const d = event.id;
+                    tooltip.style('opacity', 1)
+                        .style('left', (d3.event.pageX+30)+'px')
+                        .style('top', (d3.event.pageY-20)+'px')
+                        .attr('data-education', ()=>{
+                            let match = (d in data);
+                            if (match) {
+                                return data[d]
+                            }
+                            return 0;
+                        })
+                        .html(()=>{
+                            let match = (d in data);
+                            console.log(`data[d]: ${data[d]}`)
+                            if(match){return `${data[d]} cases`}
+                            else {return '0 cases'}
+                            return 0;
+                        })
+                    })
+                .on('mouseout', (d)=>{
+                    tooltip.style('opacity', 0)
+                    .style('left', 0)
+                    .style('top', 0)
+                })
             .exit().transition()
                 .duration(500)
                 .attr('fill', (d)=>{ return 0;})
@@ -191,9 +203,16 @@ function Choropleth(data) {
         svg.append('text')
             .attr('id', 'title')
             .text('COVID Cases per County')
-            .attr('x', w/3)
+            .style("text-anchor", "middle")
+            .attr('x', w/2)
             .attr('y', 25);
-
+        svg.append('text')
+            .attr('id', 'key')
+            .text('Cases (thousands)')
+            .style("text-anchor", "middle")
+            .attr('x', 2*w/3 - 80)
+            .attr('y', h-5)
+            .attr('font-size', 12);
 
         // svg.append('text')
         // .attr('id', 'description')
@@ -233,8 +252,10 @@ function Choropleth(data) {
 
         svg.append('g')
             .attr('id', 'source').append('text')
-                .html('Data Source: <a href="https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json">U.S. </a>')
+                .html('Map data: <a href="https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json">'
+                     + 'U.S. Counties</a>')
                 .attr('x', pad)
                 .attr('y', h-pad+10)
+                .attr('font-size', 12)
     });
 }
