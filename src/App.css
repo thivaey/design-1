@@ -30,3 +30,34 @@ body {
   padding: 2px;
   font-size: 30px;
 }
+
+div#choropleth{
+  text-align:center;
+  align-items:center;
+}
+.county{
+  stroke: rgba(11,156,49, .2)
+}
+#title{
+  font-size:1.5rem;
+}
+
+#tooltip{
+  position:absolute;
+  background:rgba(0, 0, 0, 0.6);
+  color:white;
+  padding:5px;
+  border-radius:10px;
+}
+a:hover{
+  text-decoration:none;
+}
+#about{
+  max-width:992px;
+}
+#source a{
+  fill:blue;
+}
+#choropleth{
+  overflow-x:scroll;
+}

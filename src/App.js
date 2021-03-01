@@ -123,7 +123,7 @@ function Choropleth(data) {
             .attr('height', h)
             .style('background-color', '#DDE8DA');
 
-    const tooltip = d3.select('#map')
+    const tooltip = d3.select('#choropleth')
         .append('div')
             .attr('id','tooltip')
             .style('opacity', 0);
@@ -156,32 +156,36 @@ function Choropleth(data) {
                     }
                     return 0;
                 })
+                .on('mouseover', (event,i)=>{
+                  console.log(d3.event);
+                  const d = event.id;
+                  tooltip.style('opacity', 1)
+                  .style('left', (d3.event.pageX+30)+'px')
+                  .style('top', (d3.event.pageY-20)+'px')
+                  .attr('data-education', ()=>{
+                    let match = (d in data);
+                    if (match) {
+                        return data[d]
+                    }
+                  return 0;
+                  })
+                  .html(()=>{
+                  let match = (d in data);
+                  console.log(`data[d]: ${data[d]}`)
+                  if(match){return `${data[d]} cases`}
+                  else {return '0 cases'}
+                  return 0;
+                  })
+              })
+              .on('mouseout', (d)=>{
+                  tooltip.style('opacity', 0)
+                  .style('left', 0)
+                  .style('top', 0)
+              })
             .exit().transition()
                 .duration(500)
                 .attr('fill', (d)=>{ return 0;})
                 .remove();
-                // .on('mouseover', (event,d)=>{
-                //     tooltip.style('opacity', 1)
-                //     .style('left', (event.pageX+30)+'px')
-                //     .style('top', (event.pageY-20)+'px')
-                //     .attr('data-education', ()=>{
-                //     let eduMatch = edu.filter(data=>data.fips==d.id);
-                //     if(eduMatch[0]){
-                //         return eduMatch[0].cases;
-                //     }
-                //     return 0;
-                //     })
-                //     .html(()=>{
-                //     let eduMatch = edu.filter(data=>data.fips==d.id);
-                //     if(eduMatch[0]){return `${eduMatch[0].county}, ${eduMatch[0].state}<br/> ${eduMatch[0].cases}`}
-                //     return 0;
-                //     })
-                // })
-                // .on('mouseout', (d)=>{
-                //     tooltip.style('opacity', 0)
-                //     .style('left', 0)
-                //     .style('top', 0)
-                // });
 
 
         svg.append('text')
