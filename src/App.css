@@ -18,3 +18,15 @@ body {
     margin: auto;
     align-content: center;
 }
+
+.flex-container {
+  display: flex;
+  background-color: azure;
+}
+
+.flex-container > div {
+  background-color: azure;
+  margin: 2px;
+  padding: 2px;
+  font-size: 30px;
+}
