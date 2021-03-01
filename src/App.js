@@ -61,7 +61,7 @@ function setUpHandler() {
     var eventHandler = document.getElementById('eventHandler')
     eventHandler.addEventListener('change', function(e) {
         var vals = e.data;
-        test.text(vals[0] + ', ' + vals[1]);
+        // test.text(vals[0] + ', ' + vals[1]);
         updateTest(computeData(vals))
         updateBarSlider(vals)
     })
