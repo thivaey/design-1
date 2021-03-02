@@ -1,9 +1,9 @@
-# Runnin (current)
+# Running (current)
 Simply open the `app.html` file
 
-Old Instructions
+# Old Instructions
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
