@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body {
+    font-family: sans-serif;
+    background-color: azure;
+}
+ 
+.title {
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slider {
+    display: block;
+    margin: auto;
+    align-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.test {
+    display: block;
+    margin: auto;
+    align-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: azure;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-container > div {
+  background-color: azure;
+  margin: 2px;
+  padding: 2px;
+  font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div#choropleth{
+  text-align:center;
+  align-items:center;
+}
+.county{
+  stroke: rgba(11,156,49, .2)
+}
+#title{
+  font-size:1.5rem;
+}
+
+#tooltip{
+  position:absolute;
+  background:rgba(0, 0, 0, 0.6);
+  color:white;
+  padding:5px;
+  border-radius:10px;
+}
+a:hover{
+  text-decoration:none;
+}
+#about{
+  max-width:992px;
+}
+#source a{
+  fill:blue;
+}
+#choropleth{
+  overflow-x:scroll;
 }

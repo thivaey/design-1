@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CS 467 Design 1</title>
+  <meta name="description" content="CS 467 Design 1">
+  <meta name="author" content="Team 18">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src= "https://d3js.org/d3-color.v2.min.js"></script>
+  <script src= "https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
+
+  <div> <!-- Title and Slider -->
+    <h1 class='title'> 2020: COVID and Sentiment </h1>
+    <svg width='500' height='120' class='slider' id='slider'></svg>
+  </div>
+
+  <div class="flex-container">
+    <div>
+      <div id='choropleth'> <!-- Map and Sentiment--> 
+        <!-- SVGs for Map and Sentiment -->
+      </div>
+    </div>
+    <div>
+      <svg width="992" height="650" id='bars'>
+        <image href="../data/uiucsentiment.jpg" height="650" width="992"/>
+      </svg>
+      <script>
+        d3.select('svg#bars') 
+          .append('rect')
+          .attr('x', 66) // x,y is upper left corner
+          .attr('y', 138)
+          .attr('width', 11)
+          .attr('height', 370)
+          .attr('opacity', 0.5)
+          .attr('id', 'left')
+        d3.select('svg#bars')
+          .append('rect')
+          .attr('x', 819) // upper right corner is at (830, 138)
+          .attr('y', 138)
+          .attr('width', 11)
+          .attr('height', 370)
+          .attr('opacity', 0.5)
+          .attr('id', 'right')
+      </script>
+      <!-- <img src="../data/uiucsentiment.jpg"></img> -->
+    </div>
+  </div>
+  <div id='eventHandler'> <!-- Map and Sentiment--> 
+    <!-- SVGs for Map and Sentiment -->
+    <svg width='500' height='500' class='test' id='test'></svg>
+  </div>
+
+  <script src="slider.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
