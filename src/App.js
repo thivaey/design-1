@@ -257,5 +257,12 @@ function Choropleth(data) {
                 .attr('x', pad)
                 .attr('y', h-pad+10)
                 .attr('font-size', 12)
+
+        svg.append('circle')
+          .attr('cx', 622)
+          .attr('cy', 260)
+          .attr('r', 5)
+          .attr('fill', 'white')
     });
+    
 }
