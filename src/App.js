@@ -82,15 +82,15 @@ function updateBarSlider(vals) {
 
 function drawTest(data) {
     var svg = d3.select('svg#test')        
-    // var test2 = svg.append('text')
-    //     .attr("id", "test2")
-    //     .attr("font-size", 12)
-    //     .attr("font-weight", "bold")
-    //     .attr("font-family", "sans-serif")
-    //     .attr("x", 250)
-    //     .attr("y", 300)
-    //     .style("text-anchor", "middle")
-    //     .text("Champaign: " + data[17019]);
+    var test2 = svg.append('text')
+        .attr("id", "test2")
+        .attr("font-size", 25)
+        .attr("font-weight", "bold")
+        .attr("font-family", "sans-serif")
+        .attr("x", 150)
+        .attr("y", 50)
+        .style("text-anchor", "middle")
+        .text("Champaign: " + data[17019]);
 
     /* Initial creation of components */
     Choropleth(data)
@@ -98,7 +98,7 @@ function drawTest(data) {
 
 function updateTest(data) {
     // Update choropleth
-    // d3.select('text#test2').text("Champaign: " + data[17019]);
+    d3.select('text#test2').text("Champaign: " + data[17019]);
     let svg = d3.select('#mapsvg')
     svg.selectAll('path')
         .call(selection => {
@@ -258,11 +258,11 @@ function Choropleth(data) {
                 .attr('y', h-pad+10)
                 .attr('font-size', 12)
 
-        svg.append('circle')
+        svg.append('diamond')
           .attr('cx', 622)
           .attr('cy', 260)
-          .attr('r', 5)
-          .attr('fill', 'white')
+          .attr('r', 7.5)
+          .attr('fill', 'cyan')
     });
     
 }
